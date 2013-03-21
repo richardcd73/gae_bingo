@@ -2,7 +2,12 @@ import logging
 
 # This file in particular is almost a direct port from Patrick McKenzie's A/Bingo's abingo/lib/abingo/statistics.rb
 
-HANDY_Z_SCORE_CHEATSHEET = [[0.10, 1.29], [0.05, 1.65], [0.01, 2.33], [0.001, 3.08]]
+#This is for a one-tailed test
+#HANDY_Z_SCORE_CHEATSHEET = [[0.10, 1.29], [0.05, 1.65], [0.01, 2.33], [0.001, 3.08]]
+#This revised cheatsheet is for a two-tailed test
+#Two-tailed is more appropriate, because we don't have any reason to assume cr1 > cr2.
+#Revised cheatsheet is taken from bottom row of http://www.harding.edu/plummer/biostats/images/ttable.jpg
+HANDY_Z_SCORE_CHEATSHEET = [[0.10, 1.65], [0.05, 1.96], [0.01, 2.58], [0.001, 3.29]]
 
 PERCENTAGES = {0.10: '90%', 0.05: '95%', 0.01: '99%', 0.001: '99.9%'}
 
